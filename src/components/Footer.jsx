@@ -12,6 +12,7 @@ export default function Footer() {
             <span className="brand-name">{site.name}</span>
           </Link>
           <p className="footer-text">{site.tagline}</p>
+          <p className="footer-description">{site.description}</p>
         </div>
 
         <div>
@@ -46,8 +47,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <div>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</div>
-        <div>Founder & CEO: Ali Hamza  |  Vision  ·  Leadership  ·  Innovation  ·  Growth</div>
+        <div className="footer-copy">&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</div>
+        <div className="footer-founder">Founder & CEO: Ali Hamza  |  Vision  ·  Leadership  ·  Innovation  ·  Growth</div>
       </div>
 
     </footer>

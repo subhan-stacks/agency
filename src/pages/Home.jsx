@@ -64,7 +64,7 @@ const testimonials = [
 
 /* ── Why choose us ── */
 const whyUs = [
-  { icon: '🏆', title: 'Proven Track Record', text: '200+ successful projects delivered across industries in Pakistan and internationally.' },
+  { icon: '🏆', title: 'Proven Track Record', text: '120+ successful projects delivered across industries in Pakistan and internationally.' },
   { icon: '⚡', title: 'Fast Turnaround', text: 'We move fast without compromising quality — because your time is money.' },
   { icon: '🔒', title: 'Transparent Pricing', text: 'No hidden fees, no surprises. Clear quotes and honest timelines every time.' },
   { icon: '💡', title: 'Innovative Solutions', text: 'We leverage the latest AI and technology to give your business a competitive edge.' },
@@ -152,10 +152,10 @@ export default function Home() {
             </Link>
           </motion.div>
           <div className="dpo-stats-row">
-            <StatBox value={200} suffix="+" label="Projects Delivered" />
+            <StatBox value={120} suffix="+" label="Projects Delivered" />
             <StatBox value={98} suffix="%" label="Client Satisfaction" />
             <StatBox value={50} suffix="+" label="Happy Clients" />
-            <StatBox value={5} suffix="+" label="Years Experience" />
+            <StatBox value={6} suffix="+" label="Years Experience" />
           </div>
         </div>
         <div className="dpo-scroll-hint"><span /></div>

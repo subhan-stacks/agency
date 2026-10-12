@@ -29,13 +29,47 @@ export default function Packages() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section pricing-section">
         <div className="container grid grid-3 pricing-grid">
           {packages.map((p, i) => (
             <Reveal key={p.name} delay={i * 80}>
               <PricingCard plan={p} yearly={yearly} />
             </Reveal>
           ))}
+        </div>
+
+        {/* Pricing Trust & Guarantees Strip */}
+        <div className="container">
+          <div className="pricing-trust-strip">
+            <div className="pricing-trust-item">
+              <span className="pricing-trust-icon">🛡️</span>
+              <div>
+                <strong>Zero Hidden Charges</strong>
+                <span>Fixed milestone-based scope</span>
+              </div>
+            </div>
+            <div className="pricing-trust-item">
+              <span className="pricing-trust-icon">⚡</span>
+              <div>
+                <strong>Founder & CEO Oversight</strong>
+                <span>Direct technical leadership</span>
+              </div>
+            </div>
+            <div className="pricing-trust-item">
+              <span className="pricing-trust-icon">📁</span>
+              <div>
+                <strong>100% Asset Ownership</strong>
+                <span>Full code & IP transferred</span>
+              </div>
+            </div>
+            <div className="pricing-trust-item">
+              <span className="pricing-trust-icon">🔄</span>
+              <div>
+                <strong>Structured Revisions</strong>
+                <span>Clear review & delivery cycle</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

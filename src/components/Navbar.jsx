@@ -12,7 +12,10 @@ export default function Navbar() {
       <div className="container navbar-inner">
         <Link to="/" className="brand" onClick={close}>
           <img src="/Logo.png" alt={site.name} className="brand-logo" />
-          <span className="brand-name">{site.name}</span>
+          <div className="brand-info">
+            <span className="brand-name">{site.name}</span>
+            <span className="brand-tagline">Hub of digital services</span>
+          </div>
         </Link>
 
         <nav className={`nav-links ${open ? 'open' : ''}`} aria-label="Main">
