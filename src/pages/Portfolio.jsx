@@ -45,7 +45,7 @@ export default function Portfolio() {
           </h1>
           <p className="portfolio-hero-desc">
             Explore our delivered client projects across Web Development, Technical SEO, Social Media
-            Campaigns, and Software Solutions — crafted for measurable business outcomes.
+            Campaigns, and Software Solutions crafted for measurable business outcomes.
           </p>
 
           {/* Trust Highlights Strip */}
