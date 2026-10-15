@@ -23,6 +23,9 @@ export default function Footer() {
                 <Link to={l.to}>{l.label}</Link>
               </li>
             ))}
+            <li>
+              <Link to="/terms">Terms &amp; Conditions</Link>
+            </li>
           </ul>
         </div>
 
@@ -47,8 +50,12 @@ export default function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <div className="footer-copy">&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</div>
-        <div className="footer-founder">Founder & CEO: Ali Hamza  |  Vision  ·  Leadership  ·  Innovation  ·  Growth</div>
+        <div className="footer-copy">
+          <span>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</span>
+          <span className="footer-legal-divider">·</span>
+          <Link to="/terms" className="footer-legal-link">Terms &amp; Conditions</Link>
+        </div>
+        <div className="footer-founder">Founder &amp; CEO: Ali Hamza  |  Vision  ·  Leadership  ·  Innovation  ·  Growth</div>
       </div>
 
     </footer>

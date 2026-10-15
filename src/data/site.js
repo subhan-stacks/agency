@@ -11,9 +11,9 @@ export const site = {
   phone: '+92 322 5673641',
   address: 'Lahore, Pakistan',
   socials: [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
-    { label: 'GitHub', href: 'https://github.com/' },
-    { label: 'Instagram', href: 'https://www.instagram.com/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ali-hamza-mk-77b809363/' },
+    { label: 'GitHub', href: 'https://github.com/alihamza-mk' },
+    { label: 'Instagram', href: 'https://www.instagram.com/NexMove.pk/' },
   ],
 };
 
@@ -196,12 +196,12 @@ export const portfolioProjects = [
   },
   {
     id: 'bj-architects',
-    title: 'Architectural Firm Creative SMM',
-    category: 'SMM Campaigns',
-    tag: 'SMM Campaign',
+    title: 'Architectural Firm Creative SMM and Website',
+    category: 'SMM Campaigns, Web Development',
+    tag: 'SMM Campaign, Web Development',
     image: '/bj.jpg',
     description: 'Creative social media portfolio management for BJ Architects showcasing architectural projects on Behance, Instagram, and LinkedIn to attract design clients.',
-    platform: 'Behance, Instagram, LinkedIn',
+    platform: 'Behance, Instagram, LinkedIn, Website',
     impact: 'High-Ticket Client Inquiries',
   },
   {
@@ -226,11 +226,11 @@ export const portfolioProjects = [
   },
   {
     id: 'al-fatima',
-    title: 'Al Fatima Healthcare Digital Portal',
+    title: 'Al Fatima Quran Academy Website',
     category: 'Web Development',
     tag: 'Web Development',
     image: '/al fatima.jpg',
-    description: 'Modern healthcare portal with doctor schedules, patient appointment booking, and technical on-page SEO optimization.',
+    description: 'Quran learning platform with daily lessons, virtual classrooms, student progress tracking, and full content management system.',
     platform: 'Web App, SEO Markup, CMS',
     impact: 'Automated Patient Scheduling',
   },

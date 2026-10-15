@@ -96,14 +96,17 @@ export default function Home() {
         {/* Video Background */}
         <video
           className="dpo-hero-video"
-          src="/Marko-Video-Background.mp4"
           autoPlay
           muted
           loop
           playsInline
+          webkit-playsinline="true"
           preload="auto"
           aria-hidden="true"
-        />
+        >
+          <source src="/Marko-Video-Background.webm" type="video/webm" />
+          <source src="/Marko-Video-Background.mp4" type="video/mp4" />
+        </video>
         <div className="dpo-hero-bg-overlay" />
         <div className="dpo-hero-particles">
           {[...Array(20)].map((_, i) => (

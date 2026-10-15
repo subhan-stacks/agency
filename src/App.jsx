@@ -7,6 +7,7 @@ import Portfolio from './pages/Portfolio.jsx';
 import Packages from './pages/Packages.jsx';
 import Team from './pages/Team.jsx';
 import Contact from './pages/Contact.jsx';
+import Terms from './pages/Terms.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 export default function App() {
@@ -20,6 +21,8 @@ export default function App() {
         <Route path="/packages" element={<Packages />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/terms-and-conditions" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
