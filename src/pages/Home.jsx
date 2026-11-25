@@ -55,7 +55,7 @@ const steps = [
 
 /* ── Testimonials ── */
 const testimonials = [
-  { name: 'Ahmed Raza', role: 'CEO, TechVenture PK', text: 'NexMove Developments transformed our operations completely. Their AI automation saved us 20+ hours per week. Exceptional results and professionalism.' },
+  { name: 'Ahmed Raza', role: 'CEO, TechVenture PK', text: 'Oryn Solution transformed our operations completely. Their AI automation saved us 20+ hours per week. Exceptional results and professionalism.' },
   { name: 'Sarah Mitchell', role: 'Founder, E-Commerce Brand', text: 'The branding and digital marketing team delivered beyond expectations. Our online sales grew 180% within 3 months of working with them.' },
   { name: 'Usman Tariq', role: 'Director, FinTech Startup', text: 'Their custom software development is top-tier. Clean code, on-time delivery and a team that truly understands the product vision.' },
   { name: 'Ali Khan', role: 'Marketing Head, RetailPro', text: 'Their SEO optimization strategies pushed our main keywords to the first page within a few months. Our organic traffic has doubled and the ROI is amazing.' },
@@ -87,7 +87,7 @@ const trustedBrands = [
 ];
 
 export default function Home() {
-  usePageTitle('Digital Transformation Company | NexMove Developments Official');
+  usePageTitle('Digital Transformation Company | Oryn Solution Official');
 
   return (
     <>
@@ -249,7 +249,7 @@ export default function Home() {
                 We Deliver <span className="dpo-highlight">Results</span>
               </h2>
               <p className="dpo-section-sub" style={{ maxWidth: '480px' }}>
-                NexMove Developments combines deep technical expertise with a results-first
+                Oryn Solution combines deep technical expertise with a results-first
                 mindset. Every solution we build is designed to generate real, measurable
                 business impact for you.
               </p>
@@ -413,20 +413,20 @@ export default function Home() {
           </Reveal>
           <div className="dpo-cta-contact-info">
             <Reveal direction="left" delay={150}>
-              <a href="tel:+923225673641" className="dpo-cta-contact-item">
+              <a href="tel:03711441930" className="dpo-cta-contact-item">
                 <span className="dpo-cta-contact-icon">📞</span>
                 <div>
                   <span className="dpo-cta-contact-label">Call Us</span>
-                  <span className="dpo-cta-contact-val">+92 322 5673641</span>
+                  <span className="dpo-cta-contact-val">03711441930</span>
                 </div>
               </a>
             </Reveal>
             <Reveal direction="left" delay={300}>
-              <a href="mailto:nexmove.pk@gmail.com" className="dpo-cta-contact-item">
+              <a href="mailto:info@orynsolution.com" className="dpo-cta-contact-item">
                 <span className="dpo-cta-contact-icon">✉️</span>
                 <div>
                   <span className="dpo-cta-contact-label">Email Us</span>
-                  <span className="dpo-cta-contact-val">nexmove.pk@gmail.com</span>
+                  <span className="dpo-cta-contact-val">info@orynsolution.com</span>
                 </div>
               </a>
             </Reveal>

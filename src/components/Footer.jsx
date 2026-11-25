@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <Link to="/" className="brand">
-            <img src="/Logo.png" alt={site.name} className="brand-logo" />
+            <img src="/logo.webp" alt={site.name} className="brand-logo" />
             <span className="brand-name">{site.name}</span>
           </Link>
           <p className="footer-text">{site.tagline}</p>
@@ -25,6 +25,9 @@ export default function Footer() {
             ))}
             <li>
               <Link to="/terms">Terms &amp; Conditions</Link>
+            </li>
+            <li>
+              <Link to="/privacy">Privacy Policy</Link>
             </li>
           </ul>
         </div>
@@ -54,8 +57,9 @@ export default function Footer() {
           <span>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</span>
           <span className="footer-legal-divider">·</span>
           <Link to="/terms" className="footer-legal-link">Terms &amp; Conditions</Link>
+          <span className="footer-legal-divider">·</span>
+          <Link to="/privacy" className="footer-legal-link">Privacy Policy</Link>
         </div>
-        <div className="footer-founder">Founder &amp; CEO: Ali Hamza  |  Vision  ·  Leadership  ·  Innovation  ·  Growth</div>
       </div>
 
     </footer>

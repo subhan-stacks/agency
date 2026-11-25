@@ -4,16 +4,18 @@ import { Globe, Monitor, Smartphone, PenTool, TrendingUp, Bot, MapPin, Megaphone
 // NOTE: everything below is placeholder content - replace with your own.
 
 export const site = {
-  name: 'NexMove Development',
+  name: 'Oryn Solution',
   tagline: 'We build digital products that grow your business.',
-  description: 'Founder & CEO: Ali Hamza | Vision · Leadership · Innovation · Growth since "2023"',
-  email: 'nexmove.pk@gmail.com',
-  phone: '+92 322 5673641',
+  description: 'Founder & CEO: Subhan Ahmad | Vision · Leadership · Innovation · Growth since "2023"',
+  email: 'info@orynsolution.com',
+  phone: '03711441930',
   address: 'Lahore, Pakistan',
   socials: [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ali-hamza-mk-77b809363/' },
-    { label: 'GitHub', href: 'https://github.com/alihamza-mk' },
-    { label: 'Instagram', href: 'https://www.instagram.com/NexMove.pk/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/subhan-shiekh12345/' },
+    { label: 'Instagram', href: 'https://www.instagram.com/devstack.lab/' },
+    { label: 'GitHub', href: 'https://github.com/subhan-stacks/' },
+    { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61550660912672&locale=en_US' },
+    { label: 'Threads', href: 'https://www.threads.com/@devstack.lab' },
   ],
 };
 
@@ -22,7 +24,8 @@ export const navLinks = [
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
   { to: '/portfolio', label: 'Portfolio' },
-  { to: '/packages', label: 'Packages' },
+  // { to: '/packages', label: 'Packages' },
+  { to: '/blog', label: 'Blog' },
   { to: '/team', label: 'Team' },
   { to: '/contact', label: 'Contact' },
 ];
@@ -155,8 +158,7 @@ export const faqs = [
 ];
 
 export const team = [
-  { name: 'ALI Hamza', role: 'Founder & Software Developer', bio: 'Leads strategy and development with 5 years in software engineering.' },
-  { name: 'Subhan Ahmad', role: 'Lead Full-stack Developer', bio: 'React, Node and Firebase specialist who loves clean architecture.' },
+  { name: 'Subhan Ahmad', role: 'Founder & CEO · Lead Full-stack Developer', bio: 'Leads strategy and development with React, Node, Firebase, and clean architecture.' },
   { name: 'Mehwish Fahad', role: 'Off Page SEO Expert', bio: 'Focuses on building high-quality backlinks and improving website authority.' },
   { name: 'Faiza Rafique', role: 'SMM Manager', bio: 'Social Media Manager and Content Specialist.' },
 ];
@@ -253,6 +255,70 @@ export const portfolioProjects = [
     description: 'Comprehensive technical SEO overhaul, local Geo-targeted ranking, and backlink authority campaign driving qualified organic traffic.',
     platform: 'Google Search Console, Local SEO',
     impact: 'Top 3 Search Engine Ranking',
+  },
+];
+
+export const blogPosts = [
+  {
+    id: 'ai-automation-2026',
+    title: 'How AI Automation Saves Growing Agencies 20+ Hours Every Week',
+    category: 'AI & Automation',
+    date: 'Nov 18, 2026',
+    readTime: '5 min read',
+    author: 'Subhan Ahmad',
+    featured: true,
+    excerpt:
+      'Discover practical ways to connect WhatsApp, CRM pipelines, and LLM workflows so repetitive lead qualification and client onboarding run automatically.',
+    content: [
+      'Manual follow-ups, copy-pasting lead details into spreadsheets, and answering the same pricing questions every day quietly drain hours from high-value engineering and design work.',
+      'By combining lightweight webhook automations with custom AI assistants, businesses can qualify inquiries in seconds, route urgent requests directly to Slack or WhatsApp, and send tailored proposals automatically.',
+      'Start small: audit the three most repetitive tasks in your weekly workflow, map the trigger and destination, and automate one end-to-end loop before scaling across departments.',
+    ],
+  },
+  {
+    id: 'aeo-geo-seo-guide',
+    title: 'SEO, AEO & GEO: Preparing Your Brand for AI-First Search',
+    category: 'SEO & Growth',
+    date: 'Nov 10, 2026',
+    readTime: '6 min read',
+    author: 'Mehwish Fahad',
+    excerpt:
+      'Traditional keyword stuffing is dead. Learn how structured content, local authority signals, and answer-engine optimization win visibility on Google and AI assistants.',
+    content: [
+      'Search behavior has shifted from ten blue links to direct synthesized answers. Ranking today requires clarity for both human readers and large language models.',
+      'Answer Engine Optimization (AEO) focuses on concise, verifiable answers to real customer questions, backed by clean semantic HTML and schema markup.',
+      'Meanwhile, Generative Engine Optimization (GEO) ensures your local business profile, citations, and regional landing pages establish unmistakable trust signals.',
+    ],
+  },
+  {
+    id: 'high-converting-web-architecture',
+    title: 'Why Speed & UX Architecture Decide Website Conversions',
+    category: 'Web & Software',
+    date: 'Oct 29, 2026',
+    readTime: '4 min read',
+    author: 'Subhan Ahmad',
+    excerpt:
+      'A one-second delay can cut conversions dramatically. Here is how modern React + Vite architecture and clear visual hierarchy turn visitors into booked calls.',
+    content: [
+      'Most business websites fail not because of a bad product, but because visitors cannot immediately tell what you offer, who it is for, and what to do next.',
+      'Pair sub-second page transitions with a clear above-the-fold value proposition, scannable service cards, and friction-free contact flows.',
+      'Every extra form field or heavy unoptimized asset adds friction—keep pages lean, accessible, and focused on outcomes.',
+    ],
+  },
+  {
+    id: 'social-media-brand-consistency',
+    title: 'Building a Cohesive Brand System Across Web & Social Channels',
+    category: 'Design & Branding',
+    date: 'Oct 14, 2026',
+    readTime: '5 min read',
+    author: 'Faiza Rafique',
+    excerpt:
+      'From typography and color tokens to short-form campaign templates, consistency builds instant recognition and higher ad ROI.',
+    content: [
+      'When your Instagram ads look completely different from your landing page, prospective clients feel an immediate trust gap.',
+      'Establishing a shared design system—consistent palette, typography scale, and tone of voice—makes every campaign compound on the last one.',
+      'At Oryn Solution, we align brand identity, web UI, and social creative from day one so every touchpoint feels unmistakably yours.',
+    ],
   },
 ];
 

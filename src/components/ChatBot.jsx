@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const KB = [
   {
     patterns: ['hello', 'hi', 'hey', 'salam', 'assalam', 'good morning', 'good evening', 'greet'],
-    answer: () => `👋 Welcome to **NexMove Development**! I'm Nex, your AI assistant.\n\nHow can I help you today? You can ask me about:\n• 🌐 Our Services\n• 📦 Packages & Pricing\n• 💼 Portfolio\n• 📞 Contact & Location`,
+    answer: () => `👋 Welcome to **Oryn Solution**! I'm your AI assistant.\n\nHow can I help you today? You can ask me about:\n• 🌐 Our Services\n• 📦 Packages & Pricing\n• 💼 Portfolio\n• 📞 Contact & Location`,
   },
   {
     patterns: ['service', 'what do you', 'what you offer', 'offer', 'provide', 'work'],
@@ -33,15 +33,15 @@ const KB = [
   },
   {
     patterns: ['contact', 'reach', 'email', 'phone', 'call', 'whatsapp', 'message', 'talk', 'get in touch', 'connect', 'lets connect'],
-    answer: () => `📞 **Get in Touch with NexMove!**\n\n📧 Email: **nexmove.pk@gmail.com**\n📱 Phone/WhatsApp: **+92 322 5673641**\n📍 Address: **128-J DHA Phase 6, Lahore, Pakistan**\n\n🕐 Working Hours: Mon–Sat, 10AM–7PM PKT\n\n[Send us a message →](/contact)`,
+    answer: () => `📞 **Get in Touch with Oryn Solution!**\n\n📧 Email: **info@orynsolution.com**\n📱 Phone/WhatsApp: **03711441930**\n📍 Address: **128-J DHA Phase 6, Lahore, Pakistan**\n\n🕐 Working Hours: Mon–Sat, 10AM–7PM PKT\n\n[Send us a message →](/contact)`,
   },
   {
     patterns: ['location', 'address', 'lahore', 'where', 'office', 'dha'],
     answer: () => `📍 **Our Office:**\n128-J DHA Phase 6, Lahore, Pakistan\n\nWe also serve clients **internationally** – UK, USA, UAE & beyond!\n\n[Contact us →](/contact)`,
   },
   {
-    patterns: ['team', 'founder', 'ceo', 'ali hamza', 'who', 'about you', 'about us', 'company'],
-    answer: () => `👥 **Meet the NexMove Team:**\n\n👨‍💼 **Ali Hamza** – Founder & CEO\nVision · Leadership · Innovation since 2023\n\n👨‍💻 **Subhan Ahmad** – Lead Full-Stack Developer\n🔍 **Mehwish Fahad** – Off-Page SEO Expert\n📱 **Faiza Rafique** – SMM Manager\n\n[Learn more about us →](/about)`,
+    patterns: ['team', 'founder', 'ceo', 'subhan ahmad', 'who', 'about you', 'about us', 'company'],
+    answer: () => `👥 **Meet the Oryn Solution Team:**\n\n👨‍💼 **Subhan Ahmad** – Founder & CEO\nVision · Leadership · Innovation since 2023\n\n🔍 **Mehwish Fahad** – Off-Page SEO Expert\n📱 **Faiza Rafique** – SMM Manager\n\n[Learn more about us →](/about)`,
   },
   {
     patterns: ['seo', 'search engine', 'rank', 'google', 'keyword', 'organic', 'traffic'],
@@ -65,11 +65,11 @@ const KB = [
   },
   {
     patterns: ['thank', 'thanks', 'great', 'perfect', 'awesome', 'shukria', 'shukriya'],
-    answer: () => `😊 You're welcome! We're here whenever you need us.\n\n**Ready to start your project?**\n📞 Call: +92 322 5673641\n✉️ Email: nexmove.pk@gmail.com\n\n[Get a free quote →](/contact)`,
+    answer: () => `😊 You're welcome! We're here whenever you need us.\n\n**Ready to start your project?**\n📞 Call: 03711441930\n✉️ Email: info@orynsolution.com\n\n[Get a free quote →](/contact)`,
   },
   {
     patterns: ['bye', 'goodbye', 'khuda hafiz', 'later', 'exit', 'close'],
-    answer: () => `👋 Goodbye! Thanks for visiting **NexMove Development**.\n\nFeel free to chat anytime. Have a great day! 🚀`,
+    answer: () => `👋 Goodbye! Thanks for visiting **Oryn Solution**.\n\nFeel free to chat anytime. Have a great day! 🚀`,
   },
 ];
 
@@ -87,7 +87,7 @@ function getBotReply(userText) {
       return entry.answer();
     }
   }
-  return `🤔 Great question! I'm not sure I have the exact answer for that.\n\nPlease reach out directly:\n📧 **nexmove.pk@gmail.com**\n📞 **+92 322 5673641**\n\nOr [send us a message →](/contact) and we'll respond within 1 business day!`;
+  return `🤔 Great question! I'm not sure I have the exact answer for that.\n\nPlease reach out directly:\n📧 **info@orynsolution.com**\n📞 **03711441930**\n\nOr [send us a message →](/contact) and we'll respond within 1 business day!`;
 }
 
 /* ─── Markdown-lite renderer ─── */
@@ -118,7 +118,9 @@ function renderText(text) {
 function TypingDots() {
   return (
     <div className="cb-msg cb-msg-bot cb-typing-row">
-      <div className="cb-avatar">N</div>
+      <div className="cb-avatar">
+        <img src="/logo.webp" alt="Oryn Solution" className="cb-avatar-img" />
+      </div>
       <div className="cb-bubble cb-bubble-bot">
         <span className="cb-dot" />
         <span className="cb-dot" />
@@ -133,7 +135,11 @@ function Message({ msg }) {
   const isBot = msg.from === 'bot';
   return (
     <div className={`cb-msg ${isBot ? 'cb-msg-bot' : 'cb-msg-user'}`}>
-      {isBot && <div className="cb-avatar">N</div>}
+      {isBot && (
+        <div className="cb-avatar">
+          <img src="/logo.webp" alt="Oryn Solution" className="cb-avatar-img" />
+        </div>
+      )}
       <div className={`cb-bubble ${isBot ? 'cb-bubble-bot' : 'cb-bubble-user'}`}>
         {isBot ? renderText(msg.text) : msg.text}
       </div>
@@ -146,7 +152,7 @@ function Message({ msg }) {
 const INITIAL_MESSAGES = [
   {
     from: 'bot',
-    text: "👋 Hi! I'm **Nex**, NexMove's AI assistant.\n\nAsk me anything about our services, pricing, or portfolio — or pick a quick option below!",
+    text: "👋 Hi! I'm the **Oryn Solution** AI assistant.\n\nAsk me anything about our services, pricing, or portfolio — or pick a quick option below!",
     id: 0,
   },
 ];
@@ -237,15 +243,15 @@ export default function ChatBot() {
       </button>
 
       {/* ── Chat window ── */}
-      <div className={`cb-window ${open ? 'cb-window-open' : ''}`} role="dialog" aria-label="NexMove chat assistant">
+      <div className={`cb-window ${open ? 'cb-window-open' : ''}`} role="dialog" aria-label="Oryn Solution chat assistant">
         {/* Header */}
         <div className="cb-header">
           <div className="cb-header-avatar">
-            <span>N</span>
+            <img src="/logo.webp" alt="Oryn Solution" className="cb-avatar-img" />
             <span className="cb-online-dot" />
           </div>
           <div className="cb-header-info">
-            <span className="cb-header-name">Nex — NexMove Assistant</span>
+            <span className="cb-header-name">Oryn Solution Assistant</span>
             <span className="cb-header-status">🟢 Online · Replies instantly</span>
           </div>
           <button className="cb-close-btn" onClick={closeAndReset} aria-label="Close chat">
@@ -301,9 +307,9 @@ export default function ChatBot() {
         </div>
 
         <div className="cb-footer-note">
-          Powered by NexMove AI ·{' '}
+          Powered by Oryn Solution AI ·{' '}
           <a
-            href="https://wa.me/923225673641?text=Hi%20NexMove!%20I%20have%20a%20query%20about%20your%20services."
+            href="https://wa.me/923711441930?text=Hi%20Oryn%20Solution!%20I%20have%20a%20query%20about%20your%20services."
             className="cb-link cb-wa-link"
             target="_blank"
             rel="noopener noreferrer"

@@ -5,7 +5,7 @@ import usePageTitle from '../hooks/usePageTitle.js';
 import { services } from '../data/site.js';
 
 export default function Services() {
-  usePageTitle('NexMove Developments | Services');
+  usePageTitle('Oryn Solution | Services');
 
   return (
     <>

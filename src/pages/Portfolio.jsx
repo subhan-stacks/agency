@@ -21,7 +21,7 @@ const TRUST_STATS = [
 ];
 
 export default function Portfolio() {
-  usePageTitle('NexMove Developments | Portfolio & Work Gallery');
+  usePageTitle('Oryn Solution | Portfolio & Work Gallery');
   const [activeTab, setActiveTab] = useState('All Projects');
 
   const getCategoryCount = (cat) => {
@@ -161,7 +161,7 @@ export default function Portfolio() {
             <span className="eyebrow light">Let's Build Together</span>
             <h2>Ready to Scale Your Brand Online?</h2>
             <p>
-              Partner with us for tailored digital solutions designed to grow your business, or consult directly with Founder & CEO Ali Hamza.
+              Partner with us for tailored digital solutions designed to grow your business, or consult directly with Founder & CEO Subhan Ahmad.
             </p>
             <div className="portfolio-cta-actions">
               <Link to="/packages" className="btn btn-ghost">

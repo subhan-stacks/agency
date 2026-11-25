@@ -1,17 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Icon from './Icon.jsx';
+import { Sun, Moon } from 'lucide-react';
 import { navLinks, site } from '../data/site.js';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('oryn-theme') || 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('oryn-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   const close = () => setOpen(false);
 
   return (
     <header className="navbar">
       <div className="container navbar-inner">
         <Link to="/" className="brand" onClick={close}>
-          <img src="/Logo.png" alt={site.name} className="brand-logo" />
+          <img src="/logo.webp" alt={site.name} className="brand-logo" />
           <div className="brand-info">
             <span className="brand-name">{site.name}</span>
             <span className="brand-tagline">Hub of digital services</span>
@@ -27,6 +37,15 @@ export default function Navbar() {
           <Link to="/contact" className="btn btn-primary nav-cta" onClick={close}>
             Get a quote
           </Link>
+          <button
+            type="button"
+            className="theme-toggle-btn"
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
         </nav>
 
         <button

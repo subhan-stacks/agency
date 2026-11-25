@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "posts": {
+      ".read": true,
+      "$postId": {
+        ".write": "auth != null"
+      }
+    }
+  }
+}

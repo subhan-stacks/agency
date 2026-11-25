@@ -7,7 +7,7 @@ import usePageTitle from '../hooks/usePageTitle.js';
 import { packages, faqs } from '../data/site.js';
 
 export default function Packages() {
-  usePageTitle('NexMove Developments | Packages');
+  usePageTitle('Oryn Solution | Packages');
   const [yearly, setYearly] = useState(false);
 
   return (

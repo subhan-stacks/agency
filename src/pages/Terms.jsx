@@ -128,7 +128,7 @@ export default function Terms() {
                     By accessing our website, hiring <strong>{site.name}</strong>, signing a service agreement, or approving a project estimate, you (the &ldquo;Client&rdquo;) acknowledge that you have read, understood, and agreed to be legally bound by these Terms and Conditions.
                   </p>
                   <p>
-                    These terms govern all services provided by {site.name}, registered and operating from Lahore, Pakistan, under the visionary leadership of <strong>Founder &amp; CEO Ali Hamza</strong>. If you do not accept these terms in full, you must not use our website or commission our services.
+                    These terms govern all services provided by {site.name}, registered and operating from Lahore, Pakistan, under the visionary leadership of <strong>Founder &amp; CEO Subhan Ahmad</strong>. If you do not accept these terms in full, you must not use our website or commission our services.
                   </p>
                   <div className="terms-callout">
                     <strong>Important Note:</strong> Any custom project proposal, statement of work (SOW), or service level agreement (SLA) executed between {site.name} and the Client shall supersede these standard terms in case of direct conflict.
@@ -421,7 +421,7 @@ export default function Terms() {
                     </div>
                     <div className="terms-contact-item">
                       <span className="muted-label">Founder &amp; CEO</span>
-                      <strong>Ali Hamza</strong>
+                      <strong>Subhan Ahmad</strong>
                     </div>
                     <div className="terms-contact-item">
                       <span className="muted-label">Official Email</span>
