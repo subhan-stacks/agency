@@ -19,23 +19,52 @@ export default function Contact() {
   const [values, setValues] = useState(emptyForm);
   const [errors, setErrors] = useState({});
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues((v) => ({ ...v, [name]: value }));
     if (errors[name]) setErrors((er) => ({ ...er, [name]: undefined }));
+    if (submitError) setSubmitError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const found = validate(values);
     setErrors(found);
     if (Object.keys(found).length > 0) return;
 
-    // TODO: send `values` to your backend here (Firebase, Formspree, EmailJS, your own API...).
-    console.log('Contact form submitted:', values);
-    setSent(true);
-    setValues(emptyForm);
+    try {
+      setSubmitting(true);
+      setSubmitError('');
+
+      const formData = new FormData();
+      formData.append('access_key', 'fffdd84b-8df3-414c-942d-830a30a9dc38');
+      formData.append('subject', `New Contact Inquiry from ${values.name} — ${site.name}`);
+      formData.append('from_name', values.name);
+      formData.append('name', values.name);
+      formData.append('email', values.email);
+      formData.append('service', values.service || 'General Inquiry');
+      formData.append('message', values.message);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSent(true);
+        setValues(emptyForm);
+      } else {
+        setSubmitError(data.message || 'Failed to send message. Please try again.');
+      }
+    } catch {
+      setSubmitError('Network error. Please check your connection and try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -99,7 +128,11 @@ export default function Contact() {
                   {errors.message && <span className="error">{errors.message}</span>}
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">Send message</button>
+                {submitError && <p className="error" role="alert">{submitError}</p>}
+
+                <button type="submit" className="btn btn-primary btn-block" disabled={submitting}>
+                  {submitting ? 'Sending...' : 'Send message'}
+                </button>
               </form>
             )}
           </div>
