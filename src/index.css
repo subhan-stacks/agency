@@ -2537,12 +2537,22 @@ ul {
 .dpo-testi-track {
   display: flex;
   gap: 1.5rem;
-  animation: marquee-scroll 30s linear infinite reverse;
+  width: max-content;
+  animation: testi-ltr 24s linear infinite alternate;
   will-change: transform;
 }
 
 .dpo-testi-slider:hover .dpo-testi-track {
   animation-play-state: paused;
+}
+
+@keyframes testi-ltr {
+  0% {
+    transform: translateX(calc(-100% + min(1160px, 100vw - 2.5rem)));
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .dpo-testi-card-wrapper {

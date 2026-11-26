@@ -5,7 +5,7 @@ import usePageTitle from '../hooks/usePageTitle.js';
 import { team } from '../data/site.js';
 
 export default function Team() {
-  usePageTitle('Oryn Solution | Team');
+  usePageTitle('Team');
 
   return (
     <>

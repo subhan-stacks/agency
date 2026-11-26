@@ -7,7 +7,7 @@ import usePageTitle from '../hooks/usePageTitle.js';
 import { packages, faqs } from '../data/site.js';
 
 export default function Packages() {
-  usePageTitle('Oryn Solution | Packages');
+  usePageTitle('Packages');
   const [yearly, setYearly] = useState(false);
 
   return (

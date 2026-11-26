@@ -25,11 +25,11 @@ const KB = [
   },
   {
     patterns: ['contact', 'reach', 'email', 'phone', 'call', 'whatsapp', 'message', 'talk', 'get in touch', 'connect', 'lets connect'],
-    answer: () => `📞 **Get in Touch with Oryn Solution!**\n\n📧 Email: **info@orynsolution.com**\n📱 Phone/WhatsApp: **03711441930**\n📍 Address: **128-J DHA Phase 6, Lahore, Pakistan**\n\n🕐 Working Hours: Mon–Sat, 10AM–7PM PKT\n\n[Send us a message →](/contact)`,
+    answer: () => `📞 **Get in Touch with Oryn Solution!**\n\n📧 Email: **info@orynsolution.com**\n📱 Phone/WhatsApp: **03711441930**\n📍 Address: **Gulberg 3, Lahore, Pakistan**\n\n🕐 Working Hours: Mon–Sat, 10AM–7PM PKT\n\n[Send us a message →](/contact)`,
   },
   {
-    patterns: ['location', 'address', 'lahore', 'where', 'office', 'dha'],
-    answer: () => `📍 **Our Office:**\n128-J DHA Phase 6, Lahore, Pakistan\n\nWe also serve clients **internationally** – UK, USA, UAE & beyond!\n\n[Contact us →](/contact)`,
+    patterns: ['location', 'address', 'lahore', 'where', 'office', 'gulberg'],
+    answer: () => `📍 **Our Office:**\nGulberg 3, Lahore, Pakistan\n\nWe also serve clients **internationally** – UK, USA, UAE & beyond!\n\n[Contact us →](/contact)`,
   },
   {
     patterns: [

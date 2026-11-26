@@ -169,8 +169,11 @@ export const team = [
 
 export const testimonials = [
   { name: 'Bilal A.', company: 'Retail startup', text: 'They delivered our store in three weeks and sales doubled in the first month. Communication was excellent.' },
+  { name: 'Lucas S.', company: 'Tech Company', text: 'Their professionalism and technical expertise are top-notch. Highly recommend their services!' },
   { name: 'Fatima R.', company: 'Clinic owner', text: 'The booking chatbot saves my reception team hours every day. Clean work and fair pricing.' },
+  { name: 'Emma W.', company: 'Real Estate', text: 'Quick, professional, and the results speak for themselves. Our leads have increased significantly!' },
   { name: 'Daniel P.', company: 'SaaS founder', text: 'Great design sense and solid code. Our new dashboard feels fast and our users noticed immediately.' },
+  { name: 'Shoaib K.', company: 'Clothing Brand', text: 'Their automation solutions have been a game-changer for our daily operations. Highly recommended!' },
 ];
 
 export const values = [

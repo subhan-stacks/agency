@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Reveal from '../components/Reveal.jsx';
 import usePageTitle from '../hooks/usePageTitle.js';
 import TiltCard from '../components/TiltCard.jsx';
@@ -55,11 +55,12 @@ const steps = [
 
 /* ── Testimonials ── */
 const testimonials = [
-  { name: 'Ahmed Raza', role: 'CEO, TechVenture PK', text: 'Oryn Solution transformed our operations completely. Their AI automation saved us 20+ hours per week. Exceptional results and professionalism.' },
-  { name: 'Sarah Mitchell', role: 'Founder, E-Commerce Brand', text: 'The branding and digital marketing team delivered beyond expectations. Our online sales grew 180% within 3 months of working with them.' },
-  { name: 'Usman Tariq', role: 'Director, FinTech Startup', text: 'Their custom software development is top-tier. Clean code, on-time delivery and a team that truly understands the product vision.' },
-  { name: 'Ali Khan', role: 'Marketing Head, RetailPro', text: 'Their SEO optimization strategies pushed our main keywords to the first page within a few months. Our organic traffic has doubled and the ROI is amazing.' },
-  { name: 'Fatima Zohra', role: 'Co-Founder, EduTech', text: 'The web development team built a highly responsive, modern, and fast platform for our students. The user experience is phenomenal and code quality is flawless.' },
+  { name: 'Bilal A.', role: 'CEO, TechVenture PK', text: 'Oryn Solution transformed our operations completely. Their AI automation saved us 20+ hours per week. Exceptional results and professionalism.' },
+  { name: 'Lucas S.', role: 'Founder, E-Commerce Brand', text: 'The branding and digital marketing team delivered beyond expectations. Our online sales grew 180% within 3 months of working with them.' },
+  { name: 'Daniel P.', role: 'Director, FinTech Startup', text: 'Their custom software development is top-tier. Clean code, on-time delivery and a team that truly understands the product vision.' },
+  { name: 'Emma W.', role: 'Marketing Head, RetailPro', text: 'Their SEO optimization strategies pushed our main keywords to the first page within a few months. Our organic traffic has doubled and the ROI is amazing.' },
+  { name: 'Fatima Z.', role: 'Co-Founder, EduTech', text: 'The web development team built a highly responsive, modern, and fast platform for our students. The user experience is phenomenal and code quality is flawless.' },
+  { name: 'Hassan M.', role: 'Managing Director, CloudBridge UK', text: 'Oryn Solution redesigned our SaaS dashboard and automated our client onboarding. Our team efficiency jumped dramatically from week one.' },
 ];
 
 /* ── Why choose us ── */
@@ -87,7 +88,16 @@ const trustedBrands = [
 ];
 
 export default function Home() {
-  usePageTitle('Digital Transformation Company | Oryn Solution Official');
+  usePageTitle();
+
+  const shuffledTestimonials = useMemo(() => {
+    const copy = [...testimonials];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }, []);
 
   return (
     <>
@@ -129,8 +139,8 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="dpo-hero-title"
           >
-            Transforms Your Business With{' '}
-            <span className="dpo-highlight">Digital Innovations</span>
+            Transform Your <br />Business With a{' '}
+            <span className="dpo-highlight">Digital Agency</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -319,8 +329,8 @@ export default function Home() {
           <Reveal direction="up" delay={200}>
             <div className="dpo-testi-slider">
               <div className="dpo-testi-track">
-                {[...testimonials, ...testimonials].map((t, i) => (
-                  <div className="dpo-testi-card-wrapper" key={`${t.name}-${i}`}>
+                {shuffledTestimonials.map((t) => (
+                  <div className="dpo-testi-card-wrapper" key={t.name}>
                     <div className="dpo-testi-card">
                       <div className="dpo-testi-stars">★★★★★</div>
                       <blockquote className="dpo-testi-quote">"{t.text}"</blockquote>
@@ -435,7 +445,7 @@ export default function Home() {
                 <span className="dpo-cta-contact-icon">📍</span>
                 <div>
                   <span className="dpo-cta-contact-label">Our Office</span>
-                  <span className="dpo-cta-contact-val">128-J DHA Phase 6, Lahore</span>
+                  <span className="dpo-cta-contact-val">Gulberg 3, Lahore</span>
                 </div>
               </div>
             </Reveal>

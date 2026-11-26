@@ -21,7 +21,7 @@ const TRUST_STATS = [
 ];
 
 export default function Portfolio() {
-  usePageTitle('Oryn Solution | Portfolio & Work Gallery');
+  usePageTitle('Portfolio & Work Gallery');
   const [activeTab, setActiveTab] = useState('All Projects');
 
   const getCategoryCount = (cat) => {
