@@ -5,27 +5,19 @@ import { Link } from 'react-router-dom';
 const KB = [
   {
     patterns: ['hello', 'hi', 'hey', 'salam', 'assalam', 'good morning', 'good evening', 'greet'],
-    answer: () => `👋 Welcome to **Oryn Solution**! I'm your AI assistant.\n\nHow can I help you today? You can ask me about:\n• 🌐 Our Services\n• 📦 Packages & Pricing\n• 💼 Portfolio\n• 📞 Contact & Location`,
+    answer: () => `👋 Welcome to **Oryn Solution**! I'm your AI assistant.\n\nHow can I help you today? You can ask me about:\n• 🌐 Our Services\n• 💬 Custom Project Quotes\n• 💼 Portfolio\n• 📞 Contact & Location`,
   },
   {
     patterns: ['service', 'what do you', 'what you offer', 'offer', 'provide', 'work'],
     answer: () => `🚀 We offer **9 core digital services**:\n\n1. 🌐 **Website Development** – React/Next.js custom sites\n2. 💻 **Software Development** – SaaS, CRM, ERP\n3. 📱 **Mobile App Development** – iOS & Android\n4. 🎨 **Web Designing** – UI/UX, Figma, Prototypes\n5. 📈 **SEO** – Rankings & organic traffic\n6. 🤖 **AEO** – AI answer engine optimization\n7. 📍 **GEO** – Local & generative search\n8. 📢 **Social Media Marketing** – Content & ads\n9. ⚙️ **AI & Automation** – Chatbots, n8n workflows\n\n[Explore all services →](/services)`,
   },
   {
-    patterns: ['package', 'price', 'pricing', 'cost', 'plan', 'how much', 'rate', 'dollar', 'pkr', 'rupee', 'fee', 'charge'],
-    answer: () => `💰 We have **3 transparent packages**:\n\n**🟢 Starter** – $349 / Rs. 98,000\n• 3–5 page website, Local SEO, Social profiles\n• Delivery: 5 business days\n\n**🔵 Growth** *(Most Popular)* – $799 / Rs. 220,000\n• Full-stack development, Advanced SEO, AI chatbot\n• Delivery: 10–14 business days\n\n**🟣 Enterprise** – Custom pricing\n• Custom software, Mobile app, Dedicated team\n\n[View full packages →](/packages)`,
-  },
-  {
-    patterns: ['starter', 'basic', 'small business', 'first step'],
-    answer: () => `🟢 **Starter Package – $349 / Rs. 98,000/month**\n\n✅ Responsive 3–5 Page Website (Next.js/React)\n✅ Local SEO (GEO) Optimization\n✅ Social Media Profiles Setup\n✅ Contact Form & Lead Capture\n✅ Monthly Performance Report\n\n⏱️ Delivery: **5 Business Days**\n🔄 Revisions: **2 rounds** (within 3 days)\n💳 Extra revisions: **$30/request**\n\n[Get started →](/contact)`,
-  },
-  {
-    patterns: ['growth', 'popular', 'scale', 'conversions', 'growing'],
-    answer: () => `🔵 **Growth Package – $799 / Rs. 220,000/month** *(Most Popular)*\n\n✅ Custom Full-Stack Web Design & Development\n✅ Advanced SEO & Answer Engine Optimization\n✅ Full Social Media Management\n✅ AI Chatbot Integration (Botpress/n8n)\n✅ Bi-weekly Analytics & Conversion Tracking\n\n⏱️ Delivery: **10–14 Business Days**\n🔄 Revisions: **Unlimited** (7-day review)\n💳 Extra changes: **$50/hr** post sign-off\n\n[Choose Growth →](/contact)`,
-  },
-  {
-    patterns: ['enterprise', 'large', 'custom plan', 'big business', 'dedicated'],
-    answer: () => `🟣 **Enterprise Package – Custom Pricing**\n\n✅ Custom Software / Mobile App Development\n✅ Omnichannel Digital Marketing Strategy\n✅ Dedicated Account Manager & Lead Engineer\n✅ Custom Database & API Integrations\n✅ AI-Powered Analytics & BI\n✅ 24/7 Priority Support & Maintenance\n\n⏱️ Delivery: **Per project milestones (3–6 weeks)**\n🔄 Revisions: **Sprint review cycles**\n💳 Extra changes: **$40/hr or custom addendums**\n\n[Request a quote →](/contact)`,
+    patterns: [
+      'package', 'price', 'pricing', 'cost', 'plan', 'quote', 'budget',
+      'how much', 'rate', 'dollar', 'pkr', 'rupee', 'fee', 'charge',
+      'starter', 'basic', 'growth', 'enterprise', 'custom plan',
+    ],
+    answer: () => `💼 **Tailored Project Quotes**\n\nEvery business has unique goals, so we don't use one-size-fits-all pricing. Instead, we craft a **custom proposal** based on your exact scope, features, and timeline.\n\n✅ Share your requirements and preferred budget on our Contact page, and our team will get back to you within **1 business day** with a clear roadmap.\n\n[Share your project details →](/contact)`,
   },
   {
     patterns: ['portfolio', 'project', 'work done', 'case study', 'clients', 'example', 'past work'],
@@ -40,8 +32,24 @@ const KB = [
     answer: () => `📍 **Our Office:**\n128-J DHA Phase 6, Lahore, Pakistan\n\nWe also serve clients **internationally** – UK, USA, UAE & beyond!\n\n[Contact us →](/contact)`,
   },
   {
-    patterns: ['team', 'founder', 'ceo', 'subhan ahmad', 'who', 'about you', 'about us', 'company'],
-    answer: () => `👥 **Meet the Oryn Solution Team:**\n\n👨‍💼 **Subhan Ahmad** – Founder & CEO\nVision · Leadership · Innovation since 2023\n\n🔍 **Mehwish Fahad** – Off-Page SEO Expert\n📱 **Faiza Rafique** – SMM Manager\n\n[Learn more about us →](/about)`,
+    patterns: [
+      'what is oryn', 'oryn solution', 'about oryn', 'about agency',
+      'about company', 'about us', 'about you', 'tell me about', 'what does oryn', 'company',
+    ],
+    answer: () => `🚀 **What is Oryn Solution?**\n\n**Oryn Solution** is a full-service digital transformation agency based in Lahore, Pakistan, serving startups and growing brands locally and internationally (UK, USA, UAE & beyond).\n\nWe combine **Web & Software Engineering, AI Automation, UI/UX Design, and Growth Marketing** under one roof—with **120+ projects delivered** and **98% client satisfaction**.\n\n[Learn more about us →](/about)`,
+  },
+  {
+    patterns: [
+      'who is behind', 'behind oryn', 'who runs', 'owner',
+      'team', 'founder', 'ceo', 'subhan', 'subhan ahmad', 'who',
+      'who is subhan ahmad', 'who is mehwish fahad', 'who is faiza rafique',
+      'who is haris jameel', 'who is hamza bilal', 'who is bashir ahmad',
+    ],
+    answer: () => `👥 **Who is Behind Oryn Solution?**\n\n👨‍💼 **Subhan Ahmad** – Founder & CEO · Lead Full-Stack Developer\nVision · Leadership · Innovation since 2023\n\n🔍 **Mehwish Fahad** – Off-Page SEO Expert\n📱 **Faiza Rafique** – SMM Manager\n\n[Meet our team →](/team)`,
+  },
+  {
+    patterns: ['why oryn', 'why choose', 'how do you work', 'process', 'methodology'],
+    answer: () => `⚡ **How We Work & Why Choose Us:**\n\nOur 4-step process keeps every project transparent and on schedule:\n1. 🔍 **Discovery** – Deep-dive into your goals & market\n2. 🗺️ **Strategy** – Clear roadmap & measurable KPIs\n3. 🛠️ **Execution** – Clean code, weekly updates, zero surprises\n4. 📈 **Growth** – Continuous optimization & scaling\n\n[Start your project →](/contact)`,
   },
   {
     patterns: ['seo', 'search engine', 'rank', 'google', 'keyword', 'organic', 'traffic'],
@@ -57,7 +65,7 @@ const KB = [
   },
   {
     patterns: ['revision', 'delivery', 'timeline', 'how long', 'days', 'deadline'],
-    answer: () => `⏱️ **Delivery & Revision Policy:**\n\n🟢 **Starter** – 5 business days, 2 revision rounds ($30/extra)\n🔵 **Growth** – 10–14 business days, unlimited minor revisions ($50/hr extra)\n🟣 **Enterprise** – Milestone-based, sprint review cycles ($40/hr extra)\n\nAll packages include clear scope documentation before we begin.\n\n[See all packages →](/packages)`,
+    answer: () => `⏱️ **Delivery & Revision Policy:**\n\nEvery project includes clear milestone timelines and dedicated review cycles agreed upon before kickoff—typically **1–2 weeks** for websites and **3–6 weeks** for custom software or mobile apps.\n\n[Discuss your timeline →](/contact)`,
   },
   {
     patterns: ['mobile', 'app', 'android', 'ios', 'react native', 'flutter'],
@@ -74,7 +82,7 @@ const KB = [
 ];
 
 const QUICK_REPLIES = [
-  { label: '📦 Packages & Pricing', text: 'What are your packages and pricing?' },
+  { label: '💬 Get a Custom Quote', text: 'How do I get a quote for my project?' },
   { label: '🌐 Our Services', text: 'What services do you offer?' },
   { label: '💼 View Portfolio', text: 'Show me your portfolio projects' },
   { label: '📞 Contact Us', text: 'How can I contact you?' },
@@ -152,7 +160,7 @@ function Message({ msg }) {
 const INITIAL_MESSAGES = [
   {
     from: 'bot',
-    text: "👋 Hi! I'm the **Oryn Solution** AI assistant.\n\nAsk me anything about our services, pricing, or portfolio — or pick a quick option below!",
+    text: "👋 Hi! I'm the **Oryn Solution** AI assistant.\n\nAsk me anything about our services, portfolio, or starting a project — or pick a quick option below!",
     id: 0,
   },
 ];
@@ -289,7 +297,7 @@ export default function ChatBot() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKey}
-            placeholder="Ask about services, pricing…"
+            placeholder="Ask about services, projects, or quotes…"
             maxLength={300}
             autoComplete="off"
           />

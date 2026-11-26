@@ -21,29 +21,46 @@ export default function About() {
       </section>
 
       <section className="section">
-        <div className="container two-col">
+        <div className="container about-story-grid">
           <Reveal>
-            <h2>Our story</h2>
-            <p>
-              We started as a group of developers and designers who were tired of agencies that
-              over-promise and under-deliver. So we built the kind of agency we wished existed:
-              honest, quick, and obsessed with quality.
-            </p>
-            <p>
-              Today we work with startups, clinics, shops and growing brands, combining web
-              development, AI automation and marketing so every piece of your digital presence
-              works together.
-            </p>
+            <div className="about-story-content">
+              <span className="dpo-eyebrow">Our Story</span>
+              <h2>Built for speed, craft, and measurable growth</h2>
+              <p>
+                We started as a group of developers and designers who were tired of agencies that
+                over-promise and under-deliver. So we built the kind of agency we wished existed:
+                honest, quick, and obsessed with quality.
+              </p>
+              <p>
+                Today we work with startups, clinics, shops and growing brands, combining web
+                development, AI automation and marketing so every piece of your digital presence
+                works together.
+              </p>
+
+              <dl className="about-stats-grid">
+                {stats.map((s) => (
+                  <div key={s.label} className="about-stat-item">
+                    <dd>{s.value}</dd>
+                    <dt>{s.label}</dt>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </Reveal>
-          <Reveal delay={100}>
-            <dl className="stats stats-light">
-              {stats.map((s) => (
-                <div key={s.label} className="stat">
-                  <dt>{s.label}</dt>
-                  <dd>{s.value}</dd>
-                </div>
-              ))}
-            </dl>
+
+          <Reveal delay={120}>
+            <div className="about-portrait-frame">
+              <img
+                src="/001.png"
+                alt="Subhan Ahmad — Founder & CEO of Oryn Solution"
+                className="about-portrait-img"
+              />
+              <div className="about-portrait-overlay" />
+              <div className="about-portrait-badge">
+                <span className="about-portrait-role">Founder &amp; CEO · {site.name}</span>
+                <strong>Subhan Ahmad</strong>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>

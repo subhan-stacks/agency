@@ -158,9 +158,13 @@ export const faqs = [
 ];
 
 export const team = [
-  { name: 'Subhan Ahmad', role: 'Founder & CEO · Lead Full-stack Developer', bio: 'Leads strategy and development with React, Node, Firebase, and clean architecture.' },
-  { name: 'Mehwish Fahad', role: 'Off Page SEO Expert', bio: 'Focuses on building high-quality backlinks and improving website authority.' },
+  { name: 'Subhan Ahmad', role: 'Founder & CEO', bio: 'Founder & CEO leading company strategy, product direction, and client growth. Focused on helping businesses scale through clear execution, innovative digital solutions, and measurable results.' },
+  { name: 'Uzair Khalid', role: 'Senior Full-stack Developer', bio: 'Senior Full-stack Developer with expertise in React, Node.js, and building scalable web applications. Focused on delivering high-quality code, clean architecture, and end-to-end development solutions.' },
+  { name: 'Mehwish Fahad', role: 'Off Page SEO Expert', bio: 'Off Page SEO Expert with proven results in improving website authority, rankings, and organic traffic.' },
   { name: 'Faiza Rafique', role: 'SMM Manager', bio: 'Social Media Manager and Content Specialist.' },
+  { name: 'Haris Jameel', role: 'Fullstack & AI Developer', bio: 'Fullstack & AI Developer with expertise in AI and Machine Learning. Focused on delivering high-quality AI solutions, clean architecture, and end-to-end AI development solutions.' },
+  { name: 'Hamza Bilal', role: 'MERN Developer', bio: 'MERN Developer with expertise in React, Node.js, and building scalable web applications. Focused on delivering high-quality code, clean architecture, and end-to-end development solutions.' },
+  { name: 'Bashir Ahmad', role: 'AI Automation Developer', bio: 'AI Automation Developer with expertise in n8n, Make, Zapier, and building custom automation workflows. Focused on delivering high-quality AI solutions, clean architecture, and end-to-end automation solutions.' },
 ];
 
 export const testimonials = [
